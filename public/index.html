@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simi-SaveAll - Video Downloader</title>
+    <link rel="stylesheet" href="styles.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="4" y="4" width="24" height="24" rx="8" fill="url(#logoGrad)"/>
+                        <path d="M12 20V12l8 4-8 4z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="4" y1="4" x2="28" y2="28">
+                                <stop stop-color="#FF0050"/>
+                                <stop offset="1" stop-color="#FF6B00"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Simi<span class="highlight">-SaveAll</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    Download Any Video<br>
+                    <span class="gradient-text">In Seconds</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Paste a YouTube, Facebook, or Bilibili URL and download in your preferred quality & format
+                </p>
+
+                <!-- Tab Navigation -->
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab active" data-tab="youtube">
+                            <svg class="tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            YouTube
+                        </button>
+                        <button class="tab" data-tab="facebook">
+                            <svg class="tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            Facebook
+                        </button>
+                        <button class="tab" data-tab="bilibili">
+                            <svg class="tab-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.813 4.653h.854c1.21 0 2.227.44 2.987 1.214.76.765 1.138 1.793 1.138 3.074v9.486c0 1.28-.378 2.31-1.138 3.074-.76.765-1.777 1.138-2.987 1.138H5.333c-1.21 0-2.227-.373-2.987-1.138C1.587 19.017 1.213 17.987 1.213 16.705V8.94c0-1.28.373-2.309 1.13-3.07.76-.765 1.777-1.214 2.988-1.214h.778c-.096-.71-.062-1.38.114-2.01.176-.63.486-1.13.928-1.5s.981-.56 1.62-.56c.642 0 1.187.19 1.62.56.43.37.74.87.92 1.5.18.63.206 1.3-.006 2.01zm-10.054-1.12c-.586 0-1.07.17-1.43.52-.36.346-.54.83-.54 1.446v.6h3.626c.048-.76.072-1.31.072-1.65 0-.614-.13-1.1-.394-1.446-.264-.346-.69-.52-1.266-.52-.576 0-1.002.174-1.266.52-.264.346-.396.832-.396 1.446 0 .226.012.49.036.79h1.292v-.79zm6.24 0c-.586 0-1.07.17-1.43.52-.36.346-.54.83-.54 1.446v.6h3.626c.048-.76.072-1.31.072-1.65 0-.614-.13-1.1-.394-1.446-.264-.346-.69-.52-1.266-.52-.576 0-1.002.174-1.266.52-.264.346-.396.832-.396 1.446 0 .226.012.49.036.79h1.292v-.79zM2.827 16.705c0 .74.242 1.34.724 1.78.484.44 1.082.66 1.794.66h12.454c.712 0 1.31-.22 1.794-.66.482-.44.724-1.04.724-1.78V9.733c0-.74-.242-1.34-.724-1.78-.484-.44-1.082-.66-1.794-.66H5.345c-.712 0-1.31.22-1.794.66-.482.44-.724 1.04-.724 1.78v6.972z"/>
+                            </svg>
+                            Bilibili
+                        </button>
+                    </div>
+
+                    <!-- YouTube Content -->
+                    <div class="tab-content active" id="youtube">
+                        <div class="input-group">
+                            <div class="url-input-wrapper">
+                                <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                </svg>
+                                <input 
+                                    type="text" 
+                                    id="youtubeUrl" 
+                                    class="url-input" 
+                                    placeholder="Paste YouTube video URL here..."
+                                    autocomplete="off"
+                                >
+                                <button class="clear-btn" onclick="clearInput('youtubeUrl')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="download-btn primary" onclick="handleDownload('youtube')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <span>Get Formats</span>
+                            </button>
+                        </div>
+                        <div class="supported-sites">
+                            <span>Supports:</span>
+                            <span class="site-tag">youtube.com</span>
+                            <span class="site-tag">youtu.be</span>
+                            <span class="site-tag">Shorts</span>
+                            <span class="site-tag">Playlists</span>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Content -->
+                    <div class="tab-content" id="facebook">
+                        <div class="input-group">
+                            <div class="url-input-wrapper">
+                                <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                </svg>
+                                <input 
+                                    type="text" 
+                                    id="facebookUrl" 
+                                    class="url-input" 
+                                    placeholder="Paste Facebook video URL here..."
+                                    autocomplete="off"
+                                >
+                                <button class="clear-btn" onclick="clearInput('facebookUrl')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="download-btn primary" onclick="handleDownload('facebook')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <span>Get Formats</span>
+                            </button>
+                        </div>
+                        <div class="supported-sites">
+                            <span>Supports:</span>
+                            <span class="site-tag">facebook.com</span>
+                            <span class="site-tag">fb.watch</span>
+                            <span class="site-tag">Reels</span>
+                            <span class="site-tag">Live</span>
+                        </div>
+                    </div>
+
+                    <!-- Bilibili Content -->
+                    <div class="tab-content" id="bilibili">
+                        <div class="input-group">
+                            <div class="url-input-wrapper">
+                                <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                                </svg>
+                                <input 
+                                    type="text" 
+                                    id="bilibiliUrl" 
+                                    class="url-input" 
+                                    placeholder="Paste Bilibili video URL here (bilibili.com or b23.tv)..."
+                                    autocomplete="off"
+                                >
+                                <button class="clear-btn" onclick="clearInput('bilibiliUrl')">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="download-btn primary" onclick="handleDownload('bilibili')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 10 12 15 17 10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <span>Get Formats</span>
+                            </button>
+                        </div>
+                        <div class="supported-sites">
+                            <span>Supports:</span>
+                            <span class="site-tag">bilibili.com</span>
+                            <span class="site-tag">b23.tv</span>
+                            <span class="site-tag">Bangumi</span>
+                            <span class="site-tag">Courses</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Format Selection Panel -->
+                <div class="format-panel" id="formatPanel" style="display: none;">
+                    <div class="format-panel-header">
+                        <h3>Select Quality &amp; Format</h3>
+                        <button class="close-panel" onclick="closeFormatPanel()">&times;</button>
+                    </div>
+                    
+                    <div class="save-info">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span>Files save to your browser's download folder. Choose your download location in browser settings.</span>
+                    </div>
+                    
+                    <div class="format-options" id="formatOptions">
+                        <!-- Formats will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div class="loading-state" id="loadingState" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing video...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Simi-SaveAll?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Download videos in seconds with our optimized processing engine</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Multiple Formats</h3>
+                        <p>Choose from MP4, WebM, MP3, and more quality options</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>100% Safe</h3>
+                        <p>No malware, no registration required. Completely free to use</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Universal Support</h3>
+                        <p>Works with YouTube, Facebook, Bilibili, and dozens of other platforms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Paste URL</h3>
+                        <p>Copy the video URL from YouTube, Facebook, or Bilibili</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Select Quality</h3>
+                        <p>Choose your preferred video quality and format</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Download</h3>
+                        <p>Click download and save to your device</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simi-SaveAll. All rights reserved.</p>
+            <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">v6 | If formats look wrong, press Ctrl+Shift+R to hard refresh</p>
+        </div>
+    </footer>
+
+    <script src="app.js?v=6"></script>
+</body>
+</html>

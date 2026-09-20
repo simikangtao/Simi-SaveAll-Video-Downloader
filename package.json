@@ -1,0 +1,23 @@
+{
+  "name": "simi-saveall-video-downloader",
+  "version": "1.0.0",
+  "description": "Simi-SaveAll - YouTube, Facebook & Bilibili video downloader with a modern dark-themed web UI. Python/Flask backend + yt-dlp.",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py"
+  },
+  "keywords": [
+    "video",
+    "downloader",
+    "youtube",
+    "facebook",
+    "bilibili",
+    "yt-dlp",
+    "flask"
+  ],
+  "author": "simikangtao",
+  "license": "MIT",
+  "engines": {
+    "python": ">=3.8"
+  }
+}

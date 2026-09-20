@@ -1,0 +1,27 @@
+# Node modules / caches
+node_modules/
+.npm-cache/
+__pycache__/
+*.pyc
+
+# Downloads (user video files)
+downloads/
+
+# Python environment
+.venv/
+venv/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+*.local
+
+# Logs
+*.log
